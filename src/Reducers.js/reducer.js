@@ -1,6 +1,4 @@
-import {state} from '../Apps';
-
-export const state = {
+export const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,
