@@ -5,7 +5,7 @@ import App from './App';
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";  //bridge between react & redux
-import { reducer } from './reducers';
+import { reducer } from '.reducers';
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
