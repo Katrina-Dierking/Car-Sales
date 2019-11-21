@@ -8,11 +8,14 @@ const AdditionalFeatures = props => {
       {props.additionalFeatures.length ? (
         <ol type="1">
           {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature 
+            key={item.id} 
+            feature={item}
+            add = {props.addFeature} />
           ))}
         </ol>
       ) : (
-        <p>Nice looking car!</p>
+        <p>I need a car like that!!!</p>
       )}
     </div>
   );
