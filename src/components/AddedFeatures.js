@@ -1,8 +1,9 @@
 import React from 'react';
-
 import AddedFeature from './AddedFeature';
 
+
 const AddedFeatures = props => {
+
   return (
     <div className="content">
       <h6>Added features:</h6>
@@ -12,7 +13,7 @@ const AddedFeatures = props => {
             <AddedFeature 
             key={item.id} 
             feature={item}
-            remove={props.removeFeature} />
+            removeFeature={props.removeFeature} />
           ))}
         </ol>
       ) : (
@@ -21,5 +22,6 @@ const AddedFeatures = props => {
     </div>
   );
 };
+
 
 export default AddedFeatures;

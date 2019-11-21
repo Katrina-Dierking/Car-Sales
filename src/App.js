@@ -1,27 +1,34 @@
 import React from 'react';
-
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { connect } from 'react-redux'
-import { addFeature, removeFeature } from './actions';
+import { addFeature, removeFeature, updateTotal } from './actions';
+
 
 
 const App = props => {
 
-  const removeFeature = (feature, car) => {
-    props.removeFeature(feature, car)
+  const removeFeature = (item) => {
+    // console.log(kd: app.js: App: removeFeature: item)
+    props.removeFeature(item)
+    props.updateTotal(-item.price);
+   
   };
 
-  const buyItem = (feature, car) => {
-    props.addFeature(feature, car);
+  const buyItem = (item)=> {
+    props.addFeature(item);
+    props.updateTotal(item.price);
   };
 
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car} />
+        <Header car={props.car}
+        additionalPrice = {props.additionalPrice} />
+
+
         <AddedFeatures 
           car={props.car}
           additionalFeatures={props.additionalFeatures}
@@ -30,9 +37,9 @@ const App = props => {
 
       <div className="box">
         <AdditionalFeatures 
+          car = {props.car}
           additionalFeatures={props.additionalFeatures} 
-          buyItem = {buyItem}
-          car = {props.car}/>
+          buyItem = {buyItem}/>
 
         <Total 
           car={props.car} 
@@ -51,4 +58,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect (mapStateToProps, {addFeature, removeFeature})(App);
+export default connect (mapStateToProps, {addFeature, removeFeature, updateTotal})(App);
