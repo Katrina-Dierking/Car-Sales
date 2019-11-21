@@ -1,8 +1,10 @@
 import React from 'react';
-import {addFeature} from '../actions';
-
 
 const AdditionalFeature = props => {
+
+  const addFeature = () => {
+    props.addFeature(props.feature)
+  };
 
   return (
     <li>

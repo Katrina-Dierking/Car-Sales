@@ -4,7 +4,7 @@ export const UPDATE_TOTAL = 'UPDATE_TOTAL';
 
 
 export const addFeature = feature => {
-    console.log(feature)
+    console.log(feature.price)
     return {
         type: ADD_FEATURE, 
         payload: feature
@@ -12,6 +12,7 @@ export const addFeature = feature => {
 }
 
 export const removeFeature = feature => {
+    console.log(feature.price)
     return {
         type: REMOVE_FEATURE,
         payload: feature
@@ -19,6 +20,7 @@ export const removeFeature = feature => {
 }
 
 export const updateTotal = total => {
+    console.log(total)
     return {
         type: UPDATE_TOTAL,
         payload: total
