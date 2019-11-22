@@ -1,6 +1,6 @@
 export const ADD_FEATURE = 'ADD_FEATURE';
 export const REMOVE_FEATURE = 'REMOVE_FEATURE';
-export const UPDATE_TOTAL = 'UPDATE_TOTAL';
+// export const UPDATE_TOTAL = 'UPDATE_TOTAL';
 
 
 export const addFeature = feature => {
@@ -19,16 +19,10 @@ export const removeFeature = feature => {
     }
 }
 
-export const updateTotal = total => {
-    console.log(total)
-    return {
-        type: UPDATE_TOTAL,
-        payload: total
-    }
-}
-
-
-// export {
-//    addFeature,
-//    removeFeature,
-// };
+// export const updateTotal = total => {
+//     console.log(total)
+//     return {
+//         type: UPDATE_TOTAL,
+//         payload: total
+//     }
+// }

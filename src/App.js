@@ -5,21 +5,17 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 
-
-
-const App = props => {
+const App = () => {
 
   return (
     <div className="boxes">
       <div className="box">
         <Header />
         <AddedFeatures />
-    
       </div>
 
       <div className="box">
         <AdditionalFeatures />
-
         <Total />
       </div>
     </div>
